@@ -23,7 +23,12 @@ class _FlagScreenState extends State<FlagScreen> {
     final crossAxisCount = getCrossAxisCount(screenWidth);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Flag Cards"), centerTitle: true),
+      appBar: AppBar(title: const Text("Flag Cards"), centerTitle: true,
+        backgroundColor: Colors.grey[200],
+        shadowColor: Colors.black,
+        elevation: 3,
+
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: countryData.length,
