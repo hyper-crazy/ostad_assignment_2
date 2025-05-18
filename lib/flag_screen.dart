@@ -12,9 +12,9 @@ class FlagScreen extends StatefulWidget {
 
 class _FlagScreenState extends State<FlagScreen> {
   int getCrossAxisCount(double width) {
-    if (width < 420) return 1;
-    if (width < 768) return 2;
-    if (width < 1024) return 3;
+    if (width <= 400) return 1;
+    if (width <= 768) return 2;
+    if (width <= 1024) return 3;
     return 4;
   }
 

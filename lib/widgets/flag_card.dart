@@ -13,17 +13,22 @@ class FlagCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return SizedBox(
-      height: 300, // Total height of card
+      width: screenWidth * 0.45,
+      height: screenHeight, // Total height of card
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         elevation: 3,
         child: LayoutBuilder(
           builder: (context, constraints) {
-            final imageHeight = constraints.maxHeight * 0.45; // 40% of card
+            final imageHeight = constraints.maxHeight * 0.45; // 45% of card
             final detailsHeight = constraints.maxHeight * 0.10; //10% of card
-            final headlineHeight = constraints.maxHeight * 0.25; // 25% of card
+            final headlineHeight = constraints.maxHeight * 0.25; // 20% of card
             final buttonHeight = constraints.maxHeight * 0.15; // 15% of card
+
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -59,7 +64,8 @@ class FlagCard extends StatelessWidget {
                         // Row for the name and flagIcon
                         Row(
                           children: [
-                            const Icon(Icons.flag, size: 20),
+                            const Icon(Icons.flag, size: 18
+                            ),
                             const SizedBox(width: 5),
                             Text(
                               name,
@@ -74,10 +80,11 @@ class FlagCard extends StatelessWidget {
                         //Row fot the population and peopleIcon
                         Row(
                           children: [
-                            const Icon(Icons.people, size: 20),
+                            const Icon(Icons.people, size: 18
+                            ),
                             const SizedBox(width: 5),
                             Text(
-                              '$population million',
+                              '$population M',
                               style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
@@ -101,10 +108,10 @@ class FlagCard extends StatelessWidget {
                       children: [
                         Text(
                           headline,
-                          maxLines: 2,
+                          maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
-                            fontSize: 18,
+                            //fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
