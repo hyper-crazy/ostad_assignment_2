@@ -12,6 +12,13 @@ class _FlagCardUIState extends State<FlagCardUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flag Cards'),
+        backgroundColor: const Color(0xFFEAECF0),
+        elevation: 3,
+        shadowColor: Colors.black,
+        centerTitle: true,
+      ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double screenWidth = constraints.maxWidth;
@@ -82,6 +89,7 @@ class _FlagCardUIState extends State<FlagCardUI> {
               : screenWidth < 1024
               ? (screenWidth / 3) - 15
               : (screenWidth / 4) - 15;
+
 
           return Padding(
             padding: const EdgeInsets.all(10),
