@@ -1,7 +1,7 @@
 # ostad_assignment_2
 
-Student Name: Morshedul Islam Maruf
-Flutter Course: Batch 10
+Student Name: Morshedul Islam Maruf.
+Flutter Course: Batch 10.
 
 ## Assignment 2 Details:
 
