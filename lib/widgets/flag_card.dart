@@ -55,7 +55,7 @@ class FlagCard extends StatelessWidget {
                   height: detailsHeight,
                   color: Colors.grey[300],
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 7),
                     child: Flex(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,13 +64,13 @@ class FlagCard extends StatelessWidget {
                         // Row for the name and flagIcon
                         Row(
                           children: [
-                            const Icon(Icons.flag, size: 18
+                            const Icon(Icons.flag, size: 12
                             ),
                             const SizedBox(width: 5),
                             Text(
                               name,
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 10,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -80,13 +80,13 @@ class FlagCard extends StatelessWidget {
                         //Row fot the population and peopleIcon
                         Row(
                           children: [
-                            const Icon(Icons.people, size: 18
+                            const Icon(Icons.people, size: 12
                             ),
                             const SizedBox(width: 5),
                             Text(
                               '$population M',
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 10,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -101,7 +101,7 @@ class FlagCard extends StatelessWidget {
                 SizedBox(
                   height: headlineHeight,
                   child: Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.symmetric(horizontal: 7),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -111,7 +111,7 @@ class FlagCard extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
-                            //fontSize: 16,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -140,7 +140,7 @@ class FlagCard extends StatelessWidget {
                           const Text(
                             'বিস্তারিত দেখি',
                             style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

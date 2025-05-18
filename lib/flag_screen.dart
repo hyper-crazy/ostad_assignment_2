@@ -12,7 +12,6 @@ class FlagScreen extends StatefulWidget {
 
 class _FlagScreenState extends State<FlagScreen> {
   int getCrossAxisCount(double width) {
-    if (width <= 400) return 1;
     if (width <= 768) return 2;
     if (width <= 1024) return 3;
     return 4;
@@ -30,9 +29,9 @@ class _FlagScreenState extends State<FlagScreen> {
         itemCount: countryData.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
-          childAspectRatio: 1,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          childAspectRatio: 0.75,
         ),
         itemBuilder: (context, index) {
           final country = countryData[index];

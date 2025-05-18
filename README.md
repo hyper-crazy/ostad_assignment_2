@@ -12,7 +12,6 @@ Make a responsive UI that shows a number of cards in a row based on the screen s
 1. The cards should be responsive. The contents of the card and the card it self should be 
    responsive, meaning it should adjust its size based on the screen size.
 2. Card count per row based on the screen size:
-   - Mobile: ScreenWidth < 420 = show 1 card (It was not require in the assignment)
    - Tablet: ScreenWidth < 768 = show 2 cards
    - Desktop: ScreenWidth < 1024 = show 3 cards
    - Large Desktop: ScreenWidth > 1024 show 4 cards
