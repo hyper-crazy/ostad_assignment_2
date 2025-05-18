@@ -29,7 +29,6 @@ class FlagCard extends StatelessWidget {
             final headlineHeight = constraints.maxHeight * 0.25; // 20% of card
             final buttonHeight = constraints.maxHeight * 0.15; // 15% of card
 
-
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -64,8 +63,7 @@ class FlagCard extends StatelessWidget {
                         // Row for the name and flagIcon
                         Row(
                           children: [
-                            const Icon(Icons.flag, size: 12
-                            ),
+                            const Icon(Icons.flag, size: 12),
                             const SizedBox(width: 5),
                             Text(
                               name,
@@ -80,8 +78,7 @@ class FlagCard extends StatelessWidget {
                         //Row fot the population and peopleIcon
                         Row(
                           children: [
-                            const Icon(Icons.people, size: 12
-                            ),
+                            const Icon(Icons.people, size: 12),
                             const SizedBox(width: 5),
                             Text(
                               '$population M',
@@ -134,18 +131,28 @@ class FlagCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
-                      child: Row(
+                      child: Flex(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        direction: Axis.horizontal,
                         children: [
-                          const Text(
-                            'বিস্তারিত দেখি',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
+                          ClipRRect(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text(
+                                  'বিস্তারিত দেখি',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                //const SizedBox(width: 3),
+                                const Icon(Icons.arrow_forward, color: Colors.black,),
+                              ],
                             ),
                           ),
-                          const SizedBox(width: 5),
-                          const Icon(Icons.arrow_forward),
                         ],
                       ),
                     ),

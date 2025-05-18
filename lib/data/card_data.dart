@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import '../widgets/flag_card.dart';
 
 final List<Map<String, String>> countryData = [
   {
